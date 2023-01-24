@@ -6,16 +6,18 @@ public class FileCopier {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
         try {
-            System.out.print("Enter the file name to be copied: ");
+            System.out.print("Enter the file name ['with extention'] to be copied: ");
             fileFullName = br.readLine(); // reading the filename with extention.
 
+            // dividing it into file name and file extention.
 
             int size = fileFullName.length();
             int pos = fileFullName.lastIndexOf('.');
 
-            // dividing it into file name and file extention.
             String fileName = fileFullName.substring(0 , pos);
             String fileExtention = fileFullName.substring(pos, size);
+                
+            
             
             File file = new File(fileFullName);
 
