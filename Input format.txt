@@ -1,0 +1,9 @@
+File Copier assignmenet 
+
+Input format :
+1. Enter complete file name with extention. for example : 1.txt 
+
+Output format :
+1. contains the new file name 
+
+
