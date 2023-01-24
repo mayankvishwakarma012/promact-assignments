@@ -7,22 +7,20 @@ public class FileCopier {
         
         try {
             System.out.print("Enter the file name ['with extention'] to be copied: ");
-            fileFullName = br.readLine(); // reading the filename with extention.
-
-            // dividing it into file name and file extention.
-
-            int size = fileFullName.length();
-            int pos = fileFullName.lastIndexOf('.');
-
-            String fileName = fileFullName.substring(0 , pos);
-            String fileExtention = fileFullName.substring(pos, size);
-                
-            
+            fileFullName = br.readLine(); // reading the filename with extention.     
             
             File file = new File(fileFullName);
 
             if(file.exists() && !file.isDirectory()) //checking the file exist or not 
                 {
+                    
+                    // dividing it into file name and file extention.
+
+                    int size = fileFullName.length();
+                    int pos = fileFullName.lastIndexOf('.');
+                    String fileName = fileFullName.substring(0 , pos);
+                    String fileExtention = fileFullName.substring(pos, size);
+
                     int i = 1;
                     
                     String newFileName = fileName + " - Copy" + fileExtention;
